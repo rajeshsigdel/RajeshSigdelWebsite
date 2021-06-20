@@ -1,0 +1,54 @@
+
+---
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+    number_sections: true
+    df_print: paged
+---
+
+
+
+<style type="text/css">
+body {
+  font-size: 12pt;
+}
+
+h1, h2, h3{
+  color: #4682B4;
+}
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+
+hr {
+  border-top: 5px solid #F0F8FF;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+img {
+  margin-right: 20px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+</style>
+
+\
+\
+
+# EV Charging Stations in North Carolina
+
+In this project, I wanted to examine the geograpnhy of charging stations of electric vehicles in North Carolina. I used R wrangle the dataset downloaded from the Electric vehicles.
+
+Click here to view the work flow.
+
+
+---
+
+

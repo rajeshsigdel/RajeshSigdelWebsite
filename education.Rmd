@@ -1,0 +1,142 @@
+---
+output: html_document
+---
+
+<br>
+
+
+\
+
+
+<style type="text/css">
+body {
+  font-size: 12pt;
+}
+
+h1, h2, h3{
+  color: #4682B4;
+}
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+
+hr {
+  border-top: 5px solid #F0F8FF;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+img {
+  margin-right: 20px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+</style>
+
+
+
+# Education
+
+---
+
+
+Ph.D in Geography - University of North Carolina at Greensboro, Greensboro, NC -Expected Graduation: 2022 <br>
+MS in Geography - Western Michigan University, Kalamazoo, MI - 2019 <br>
+MS in Biology - Grand Valley State University, Allandale, MI - 2017 <br>
+Bsc. in Environmental Science - Tribhuvan University, Kathmandu, Nepal - 2014
+
+
+
+\
+
+
+# Honors and Awards
+
+---
+
+1st Place Winner in Great Lakes AAG Masters Degree Student Research Competition: Presented objectives, methods, results, and conclusion of the research within 20 minutes.
+
+2nd Place Winner in 3 Minute Thesis Competition (2019): Western Michigan University: Presented objectives, methods, results, and conclusion of the research within 3 minutes
+
+Graduate Research and Creative Scholar Award (2019) by Department of Geography, Environment, and Tourism of Western Michigan University: For outstanding contribution to the field of GIS 
+
+Graduate Dean Citation of Academic Excellence (2017) by Grand Valley State University: For Excellence in Service to the Community or Profession
+  
+Near East and South Asia scholarship program (2011-2012), sponsored by the Fulbright Commission of Nepal, and funded by the US Department of State
+
+\
+
+
+Note: I was selected to participate in the National Water Center Innovators Program Summer Institute of 2020 (June 8 - July 23, 2020) at the University of Alabama. The Summer Institute provides an opportunity to collaborate with national leaders in hydrology, modeling, and decision support, and with top graduate students in the field. The program was canceled due to COVID-19.
+
+\
+   
+---
+
+\
+
+
+This video was taken by Graduate Student Association of Western Michigan University during 3MT competition. I was awarded with second prize in the competition. Kindly note that I have improved my accent since then `r emo::ji("smile")` 
+
+\
+
+
+<style type="text/css">
+.responsive {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+
+}
+.responsive iframe {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+}
+
+</style>
+
+<div class="responsive">
+   <iframe width="400" height="300" src="https://www.youtube.com/embed/eomfFC7JtsQ" frameborder="0" allowfullscreen></iframe>  
+   Click play button to watch the video
+</div>
+
+---
+
+---
+
+
+<img src="images/dean.jpg" width="500" height="350"/> <img src="images/wmuaward.jpg" width="400" height="350"/>
+
+---
+
+---
+
+# Students' testomonials
+
+\
+
+### Fall 2019
+
+\
+
+![](images/eval1.PNG)
+
+\
+
+### Fall 2020
+
+\
+
+![](images/eval2.PNG)
+
+
+
+
+
+
+

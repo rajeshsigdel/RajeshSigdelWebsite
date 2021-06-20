@@ -1,0 +1,74 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+    number_sections: true
+    df_print: paged
+---
+
+
+
+<style type="text/css">
+body {
+  font-size: 12pt;
+}
+
+h1, h2, h3{
+  color: #4682B4;
+}
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+
+hr {
+  border-top: 5px solid #F0F8FF;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+img {
+  margin-right: 20px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+</style>
+
+\
+
+
+<i class="fas fa-project-diagram "></i> My Tableau Viz
+
+\
+
+
+# Natural Disasters in the US
+
+<div class="col-sm-6">
+
+![](images/Dashboard.png)
+
+</div>
+
+Natural Disasters such as storms, hurricanes, and flash floods claims thousands of lives of lives each year in the United States. I downloaded the Storm Events Data from the [NOAA's National National Weather Service (NWS) website](https://www.ncdc.noaa.gov/stormevents/) and created a dashboard using **Tableau** software. 
+
+
+The date ranged from 20211 to 2020 and the data were downloaded in .csv format (10 .csv file total). The data was cleaned up/joined in R and Excel. 
+
+[Check here](https://public.tableau.com/app/profile/rajesh6683/viz/storms_dashboard/Dashboard2) to view the dashboard. 
+
+\
+\
+\
+\
+
+----
+
+
+
+
+

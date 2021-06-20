@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>GIS Project Examples</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style_web.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MyLabJournal</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="Articles.html">
+    <span class="fa fa-book"></span>
+     
+    Articles and Publications
+  </a>
+</li>
+<li>
+  <a href="education.html">
+    <span class="fa fa-user-graduate"></span>
+     
+    Educations and Awards
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-laptop"></span>
+     
+    Projects &amp; Portfolio
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Projects_GIS.html">GIS Projects</a>
+    </li>
+    <li>
+      <a href="Projects_Tableau.html">Tableau Projects</a>
+    </li>
+    <li>
+      <a href="Projects_R.html">R Projects</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="aboutme.html">
+    <span class="fa fa-user"></span>
+     
+    About me
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a>
+    <span class="fa fa-code fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/GeoStudentRaj">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">GIS Project Examples</h1>
+
+</div>
+
+
+<style type="text/css">
+body {
+  font-size: 12pt;
+}
+
+h1, h2, h3{
+  color: #4682B4;
+}
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+
+hr {
+  border-top: 5px solid #F0F8FF;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+img {
+  margin-right: 20px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+</style>
+<p>I love wrangling and visualizing spatial data. I primarily use ESRI when working with spatial file. Following are some of the examples of the projects that I worked in various time. The projects consist of:</p>
+<ul>
+<li>ArcGIS/ArcPro maps</li>
+<li>ArcGIS Online dashboards</li>
+<li>ArcGIS Online web map applications</li>
+<li>ArcGIS Online Story Maps</li>
+</ul>
+<p><br />
+<br />
+</p>
+<div id="tin-map" class="section level1">
+<h1><span class="header-section-number">1</span> TIN Map</h1>
+<div class="col-sm-6">
+<p><img src="images/HillSlopeNB.jpg" /></p>
+</div>
+<p>Watershed is an area of the land that drains into a common outlet (pour point). Triangulated Irregular Networks are useful in visualizing terrain of the earth. I created a Triangular Irregular Network of my study site of the North Buffalo Creek using ArcMap 10.5.</p>
+<p>I used two feet countour interval of the Guilford country that was downloaded from the North Carolina State GIS website. Some of the tools used to create the map were: Fill tool, flow direction, flow accumulation, pourpoint, and raster to vector conversion.</p>
+<p><a href = "https://drive.google.com/file/d/10B-t5N9NMjMJyrRT8TaFGqQKlTnC8oLA/view?usp=sharing" target= "_blank"> Click here</a> to view the map.</p>
+<p><br />
+<br />
+<br />
+</p>
+<hr />
+</div>
+<div id="watershed-map" class="section level1">
+<h1><span class="header-section-number">2</span> Watershed Map</h1>
+<div class="col-sm-6">
+<p><img src="images/WatershedStreets.jpg" /></p>
+</div>
+<p>ArcGIS software was used delineate the watershed of my study site. The intersection of Yanceyville street and North Buffalo Creek was chosen as a pour point.</p>
+<p>Digital Elevation Model (DEM) was downloaded from the North Carolina GIS archive. First “fill” tool was used to create a depressionless DEM. Then, flow direction grid was created which was followed by the creation of flow accumulation raster.</p>
+<p>The pour point was used to create watershed raster which was then converted to polygon.</p>
+<p><a href = "https://drive.google.com/file/d/1W2KHsKIwyK0YjfYYIeg89TQV2qsHtNww/view?usp=sharing" target= "_blank"> Click here</a> to view the map.</p>
+<p><br />
+<br />
+</p>
+<hr />
+</div>
+<div id="evs-arcgis-dashboard" class="section level1">
+<h1><span class="header-section-number">3</span> EV’s ArcGIS Dashboard</h1>
+<div class="col-sm-6">
+<p><img src="images/ArcGIS_Dashboard_electric.PNG" /></p>
+</div>
+<p>Electric vehicles (EV) are considered to be one of the most important solutions to global climate change since they do not have a tailpipe to emit carbon dioxide. Many companies have started to manufacture EVs en masse. Charging stations have also been installed throughout the United States.</p>
+<p>This <strong>dashboard</strong> shows all the charging stations in North Carolina aggregated at the county level.</p>
+<p><a href = "https://uncg.maps.arcgis.com/apps/dashboards/d8c35828c7a4489ea2e9a6b7d69e817d" target= "_blank"> Click here</a> to view the dashboard.</p>
+<p><br />
+</p>
+<hr />
+</div>
+<div id="glaciers-in-glacier-national-park" class="section level1">
+<h1><span class="header-section-number">4</span> Glaciers in Glacier National Park</h1>
+<div class="col-sm-6">
+<p><img src="images/Glaciers.png" /></p>
+</div>
+<p>Glaciers are huge mass of ice that move slowly due to the influence of its own weight and gravity. Glaciers are the largest reservoir of fresh water in the world. Many glaciers around the globe are retreating (reduction of size by melting) at an unprecedented rate.</p>
+<p>Using publicly-available spatial data from the USGS, I created an application in <strong>ArcGIS online</strong> where users can manipulate a slide bar to see the changes in individual glaciers at Glacier National Park between 1966 and 2015. Click here to interact with the application.</p>
+<p><a href = "https://uncg.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=2e8b4a5555f34bc9bb8ec6279de814c3" target= "_blank"> Click here</a> to view the application.</p>
+<p><br />
+</p>
+<hr />
+</div>
+<div id="land-cover-change" class="section level1">
+<h1><span class="header-section-number">5</span> Land Cover change</h1>
+<div class="col-sm-6">
+<p><img src="images/earthlandcover.png" /></p>
+</div>
+<p>Using publicly available dataset from ESRI, I created a <strong>web map application (ArcGIS Web AppBuilder) in ArcGIS Online</strong> that depicts the temporal and spatial land cover change of the Earth from 1994 to 2018.It</p>
+<p>It is hoped that visualizations like this helps public understand how the land cover is changing and encourages them to take actions to decrease green house gas emissions that are emitted from changing land cover.</p>
+<p><a href = "https://uncg.maps.arcgis.com/apps/MapJournal/index.html?appid=f80274d5c0234a67ae3341c890981b5c" target= "_blank"> Click here</a> to view the application.</p>
+<p><br />
+</p>
+<hr />
+</div>
+<div id="story-map-website" class="section level1">
+<h1><span class="header-section-number">6</span> Story Map (Website)</h1>
+<div class="col-sm-6">
+<p><img src="images/StoryMap.png" /></p>
+</div>
+<p>I created a <strong>story map</strong> to show the journey of mine from Nepal to United States.</p>
+<p>The story map was created using <strong>ArcGIS online Story Map application.</strong></p>
+<p>Click on the link to view the Story Map: <a href="https://arcg.is/19qnqS0" class="uri">https://arcg.is/19qnqS0</a></p>
+<p><br />
+<br />
+<br />
+</p>
+<hr />
+</div>
+<div id="global-warming" class="section level1">
+<h1><span class="header-section-number">7</span> Global Warming</h1>
+<div class="col-sm-6">
+<p><img src="images/ClimateChange.png" /></p>
+</div>
+<p>Intergovernmental Panel on Climate Change (IPCC) report mentioned with high confidence that the Global warming is likely to reach more than 1.5 C in the near future.</p>
+<p>Using an available raster dataset from ESRI, I created an application that shows projected increases in the temperature of the Earth at different locations.</p>
+<p><a href = "https://uncg.maps.arcgis.com/apps/webappviewer/index.html?id=681d6a0833104fbba0686503fb82da5c" target= "_blank"> Click here</a> to view the application.</p>
+<p><br />
+<br />
+</p>
+<hr />
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

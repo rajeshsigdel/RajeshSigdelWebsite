@@ -1,0 +1,35 @@
+name: "Rajesh Sigdel"
+navbar:
+  title: "MyLabJournal"
+  left:
+    - text: "Home"
+      icon: fas fa-home
+      href: index.html
+    - text: "Articles and Publications"
+      icon: fa-book
+      href: Articles.html
+    - text: "Educations and Awards"
+      icon: fa-user-graduate
+      href: education.html
+    - text: "Projects & Portfolio"
+      icon: fa-laptop
+      menu:
+        - text: "GIS Projects"
+          href: Projects_GIS.html
+        - text: "Tableau Projects"
+          href: Projects_Tableau.html
+        - text: "R Projects"
+          href: Projects_R.html
+    - text: "About me"
+      icon: fa-user
+      href: aboutme.html
+  right:
+    - icon: fa-code fa-lg
+    # href: https://github.com/rajeshsigdel
+    - icon: fa-twitter
+      href: https://twitter.com/GeoStudentRaj
+output_dir: "docs"
+output:
+  html_document:
+    css: style_web.css
+    theme: flatly
