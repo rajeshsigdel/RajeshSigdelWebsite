@@ -50,7 +50,7 @@ img {
 
 <div class="col-sm-6">
 
-![](images/Dashboard.png)
+![](images/disaster_dashboard.png)
 
 </div>
 
