@@ -1,5 +1,3 @@
-
-
 ---
 title: "GIS Project Examples"
 output:
