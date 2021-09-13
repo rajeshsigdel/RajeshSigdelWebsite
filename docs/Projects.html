@@ -13,12 +13,22 @@
 
 <title>Projects</title>
 
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -37,14 +47,9 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      </style>
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -57,32 +62,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="style_web.css" type="text/css" />
 
@@ -93,10 +73,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -113,40 +89,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -174,7 +123,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -186,7 +135,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -197,10 +146,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -212,7 +174,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -344,7 +305,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -369,7 +330,7 @@ div.tocify {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home"></span>
+    <span class="fas fa-home"></span>
      
     Home
   </a>
@@ -434,7 +395,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -474,8 +435,8 @@ img {
 <i class="fas fa-project-diagram "></i> These are some of the projects that I was/am involved in either in school as a student or in my professional life.</p>
 <p><br />
 </p>
-<div id="north-buffalo-creek-pilot-study" class="section level1">
-<h1><span class="header-section-number">1</span> North Buffalo Creek Pilot Study</h1>
+<div id="north-buffalo-creek-pilot-study" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> North Buffalo Creek Pilot Study</h1>
 <div class="col-sm-6">
 <p><img src="images/Raj_pilot.jpg" /> <em>Photo: Raj collecting data in North Buffalo Creek</em></p>
 </div>
@@ -483,8 +444,8 @@ img {
 <p>Some of the metrics that were evaluated were: frequency, and volume of wood at each site (descriptive statistics), whether the frequencies and volume of large wood at each site are statistically significant from each other <strong>(Chi-square test, and Kruskal Wallis test)</strong>. <a href="https://rpubs.com/rajesh1/701224" target="_blank">Click here</a> to learn more about it.</p>
 <hr />
 </div>
-<div id="great-smoky-mountains" class="section level1">
-<h1><span class="header-section-number">2</span> Great Smoky Mountains</h1>
+<div id="great-smoky-mountains" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> Great Smoky Mountains</h1>
 <div class="col-sm-6">
 <p><img src="images/lwd.jpg" /></p>
 </div>
@@ -493,16 +454,16 @@ img {
 <p><em>Photo: Raj and Lena collecting data in Smokey Mountain Natioanl Park</em></p>
 <hr />
 </div>
-<div id="hill-slope-hydrology" class="section level1">
-<h1><span class="header-section-number">3</span> Hill Slope Hydrology</h1>
+<div id="hill-slope-hydrology" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> Hill Slope Hydrology</h1>
 <p>I have tried to list here all the projects that I have worked on including big projects, class projects or even small trivial things that I did during my school time.</p>
 <br />
 
 <div class="col-sm-6">
 <p><img src="images/HillSlopeNB.jpg" /></p>
 </div>
-<div id="tin-map" class="section level2">
-<h2><span class="header-section-number">3.1</span> TIN Map</h2>
+<div id="tin-map" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> TIN Map</h2>
 <p>Watershed is an area of the land that drains into a common outlet (pour point). Triangulated Irregular Networks are useful in visualizing terrain of the earth. I created a Triangular Irregular Network of my study site of the North Buffalo Creek using ArcMap 10.5.Following steps was used:<br />
 Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site. <a href = "https://drive.google.com/file/d/10B-t5N9NMjMJyrRT8TaFGqQKlTnC8oLA/view?usp=sharing" target= "_blank"> Click here</a> to view the image.</p>
 <hr />
@@ -510,8 +471,8 @@ Two feet interval contour interval of the Guilford county, downloaded from the N
 <p><img src="images/WatershedStreets.jpg" /></p>
 </div>
 </div>
-<div id="watershed-map" class="section level2">
-<h2><span class="header-section-number">3.2</span> Watershed Map</h2>
+<div id="watershed-map" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> Watershed Map</h2>
 <p>I used ArcGIS to delineate the watershed of my study site. The intersection of Yanceyville street and North Buffalo Creek was chosen as a pour point. Digital Elevation Model (DEM) was downloaded from the North Carolina GIS archive. First “fill” tool was used to create a depressionless DEM. Then, flow direction grid was created which was followed by the creation of flow accumulation raster. The pout point was used to create watershed raster which was then converted to polygon.</p>
 <p><br />
 <br />
@@ -521,16 +482,16 @@ Two feet interval contour interval of the Guilford county, downloaded from the N
 <hr />
 </div>
 </div>
-<div id="d-surface" class="section level1">
-<h1><span class="header-section-number">4</span> 3D Surface</h1>
+<div id="d-surface" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> 3D Surface</h1>
 <p>Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site.</p>
 </div>
-<div id="d-surface-1" class="section level1">
-<h1><span class="header-section-number">5</span> 3D surface</h1>
+<div id="d-surface-1" class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> 3D surface</h1>
 <p>Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site.</p>
 </div>
-<div id="d-surface-2" class="section level1">
-<h1><span class="header-section-number">6</span> 3D Surface</h1>
+<div id="d-surface-2" class="section level1" number="6">
+<h1 number="6"><span class="header-section-number">6</span> 3D Surface</h1>
 <p>Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site.</p>
 </div>
 
@@ -545,7 +506,7 @@ Two feet interval contour interval of the Guilford county, downloaded from the N
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -563,7 +524,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -572,6 +533,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

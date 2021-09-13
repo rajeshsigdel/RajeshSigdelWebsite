@@ -81,7 +81,7 @@ Note: I was selected to participate in the National Water Center Innovators Prog
 \
 
 
-This video was taken by Graduate Student Association of Western Michigan University during 3MT competition. I was awarded with second prize in the competition. Kindly note that I have improved my accent since then `r emo::ji("smile")` 
+This video was taken by Graduate Student Association of Western Michigan University during 3MT competition. I was awarded with second prize in the competition. 
 
 \
 

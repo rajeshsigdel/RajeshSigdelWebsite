@@ -10,65 +10,29 @@ output:
 
 
 
-<style type="text/css">
-body {
-  font-size: 12pt;
-}
-
-h1, h2, h3{
-  color: #4682B4;
-}
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-
-hr {
-  border-top: 5px solid #F0F8FF;
-}
-
-.clearfix {
-  overflow: auto;
-}
-
-img {
-  margin-right: 20px;
-  box-shadow: 5px 5px 10px #ccc;
-}
-
-</style>
-
-\
-
-
-<i class="fas fa-project-diagram "></i> My Tableau Viz
-
 \
 
 
 # Natural Disasters in the US
 
-<div class="col-sm-6">
 
-![](images/disaster_dashboard.png)
-
-</div>
 
 Natural Disasters such as storms, hurricanes, and flash floods claims thousands of lives of lives each year in the United States. I downloaded the Storm Events Data from the [NOAA's National National Weather Service (NWS) website](https://www.ncdc.noaa.gov/stormevents/) and created a dashboard using **Tableau** software. 
 
 
 The date ranged from 20211 to 2020 and the data were downloaded in .csv format (10 .csv file total). The data was cleaned up/joined in R and Excel. 
 
-[Check here](https://public.tableau.com/app/profile/rajesh6683/viz/storms_dashboard/Dashboard2) to view the dashboard. 
-
-\
-\
-\
-\
 
 ----
 
 
+<div class='tableauPlaceholder' id='viz1630260295574' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;storms_dashboard&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='storms_dashboard&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;storms_dashboard&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div> <script type='text/javascript'>                    var divElement = document.getElementById('viz1630260295574');var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';var scriptElement = document.createElement('script');scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+</div>
 
+
+
+---
+
+# Natural Disasters in the US
 
 
