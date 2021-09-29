@@ -22,7 +22,7 @@ navbar:
           href: Projects_R.html
     - text: "About me"
       icon: fa-user
-      href: aboutme.html
+      href: practice.html
   right:
     - icon: fa-code fa-lg
     # href: https://github.com/rajeshsigdel
