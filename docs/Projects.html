@@ -11,7 +11,7 @@
 
 
 
-<title>Tableau Dashboard Examples</title>
+<title>Projects</title>
 
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -399,7 +399,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Tableau Dashboard Examples</h1>
+<h1 class="title toc-ignore">Projects</h1>
 
 </div>
 
@@ -431,54 +431,68 @@ img {
 }
 
 </style>
-<p>Tableau is my favorite tool when it comes to visualizing non-spatial data. I love its flexibility in giving actionable insights of the data. It also helps tp analyze the data rapidly which helps make business faster.</p>
+<p><br />
+<i class="fas fa-project-diagram "></i> These are some of the projects that I was/am involved in either in school as a student or in my professional life.</p>
 <p><br />
 </p>
-<div id="citizen-science" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Citizen Science</h1>
+<div id="north-buffalo-creek-pilot-study" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> North Buffalo Creek Pilot Study</h1>
 <div class="col-sm-6">
-<p><a href="https://public.tableau.com/app/profile/rajesh6683/viz/CitizenScienceData/CitizenScienceData" target="_blank"><img src="images/Citizen_Science_Data.png" /></a></p>
+<p><img src="images/Raj_pilot.jpg" /> <em>Photo: Raj collecting data in North Buffalo Creek</em></p>
 </div>
-<p>Natural Disasters such as storms, hurricanes, and flash floods claims thousands of lives of lives each year in the United States. I downloaded the Storm Events Data from the NOAA’s National National Weather Service (NWS) website and created a dashboard using Tableau software.</p>
-<p>The date ranged from 20211 to 2020 and the data were downloaded in .csv format (10 .csv file total). The data was cleaned up/joined in R and Excel.</p>
+<p>I collected data during a pilot study of dead large wood (&lt; 1 m in length and &lt; 10 cm diameter) at Greensboro’s North Buffalo Creek on October 23 and 24, 2020. Three different reaches (sites) of the creek were selected and studied: Latham Park, Audubon Preserve, and Lake Daniel Park. Two hundred meters of each reach was surveyed by following Washington State Large Woody Debris Survey Protocol.</p>
+<p>Some of the metrics that were evaluated were: frequency, and volume of wood at each site (descriptive statistics), whether the frequencies and volume of large wood at each site are statistically significant from each other <strong>(Chi-square test, and Kruskal Wallis test)</strong>. <a href="https://rpubs.com/rajesh1/701224" target="_blank">Click here</a> to learn more about it.</p>
+<hr />
+</div>
+<div id="great-smoky-mountains" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> Great Smoky Mountains</h1>
+<div class="col-sm-6">
+<p><img src="images/lwd.jpg" /></p>
+</div>
+<p>Wood surveys in July and August of 2019 were conducted on four reaches in two watershed systems that were affected by the 2016 Chimney Tops 2 wildfire in Great Smokey Mountains National Park in Tennessee, USA. The goal of the study was to understand the relative significance of the burned wood in the total wood budget in streams.</p>
+<p>After the field survey, I entered the data into an Excel sheet and performed data analysis. I also helped write the results of the project. Our study suggested that fire provides major influx of woody debris into streams. The manuscript of the research is under review for a scientific publication.</p>
+<p><em>Photo: Raj and Lena collecting data in Smokey Mountain Natioanl Park</em></p>
+<hr />
+</div>
+<div id="hill-slope-hydrology" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> Hill Slope Hydrology</h1>
+<p>I have tried to list here all the projects that I have worked on including big projects, class projects or even small trivial things that I did during my school time.</p>
+<br />
+
+<div class="col-sm-6">
+<p><img src="images/HillSlopeNB.jpg" /></p>
+</div>
+<div id="tin-map" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> TIN Map</h2>
+<p>Watershed is an area of the land that drains into a common outlet (pour point). Triangulated Irregular Networks are useful in visualizing terrain of the earth. I created a Triangular Irregular Network of my study site of the North Buffalo Creek using ArcMap 10.5.Following steps was used:<br />
+Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site. <a href = "https://drive.google.com/file/d/10B-t5N9NMjMJyrRT8TaFGqQKlTnC8oLA/view?usp=sharing" target= "_blank"> Click here</a> to view the image.</p>
+<hr />
+<div class="col-sm-6">
+<p><img src="images/WatershedStreets.jpg" /></p>
+</div>
+</div>
+<div id="watershed-map" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> Watershed Map</h2>
+<p>I used ArcGIS to delineate the watershed of my study site. The intersection of Yanceyville street and North Buffalo Creek was chosen as a pour point. Digital Elevation Model (DEM) was downloaded from the North Carolina GIS archive. First “fill” tool was used to create a depressionless DEM. Then, flow direction grid was created which was followed by the creation of flow accumulation raster. The pout point was used to create watershed raster which was then converted to polygon.</p>
 <p><br />
-<br />
-<br />
 <br />
 <br />
 <br />
 </p>
 <hr />
 </div>
-<div id="natural-disaster" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Natural Disaster</h1>
-<div class="col-sm-6">
-<p><a href="https://public.tableau.com/app/profile/rajesh6683/viz/storms_dashboard/Dashboard2" target="_blank"><img src="images/disaster_dashboard.png" /></a></p>
 </div>
-<p>Natural Disasters such as storms, hurricanes, and flash floods claims thousands of lives of lives each year in the United States. I downloaded the Storm Events Data from the NOAA’s National National Weather Service (NWS) website and created a dashboard using Tableau software.</p>
-<p>The date ranged from 20211 to 2020 and the data were downloaded in .csv format (10 .csv file total). The data was cleaned up/joined in R and Excel.</p>
-<p><br />
-<br />
-<br />
-</p>
-<p><br />
-<br />
-</p>
-<hr />
+<div id="d-surface" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> 3D Surface</h1>
+<p>Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site.</p>
 </div>
-<div id="human-development-index" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Human Development Index</h1>
-<div class="col-sm-6">
-<p><a href="https://public.tableau.com/app/profile/rajesh6683/viz/CountriesHDIRank/Dashboard3" target="_blank"><img src="images/HDI.png" /></a></p>
+<div id="d-surface-1" class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> 3D surface</h1>
+<p>Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site.</p>
 </div>
-<p>Natural Disasters such as storms, hurricanes, and flash floods claims thousands of lives of lives each year in the United States. I downloaded the Storm Events Data from the NOAA’s National National Weather Service (NWS) website and created a dashboard using Tableau software.</p>
-<p>The date ranged from 20211 to 2020 and the data were downloaded in .csv format (10 .csv file total). The data was cleaned up/joined in R and Excel.</p>
-<p><br />
-<br />
-<br />
-<br />
-<br />
-</p>
+<div id="d-surface-2" class="section level1" number="6">
+<h1 number="6"><span class="header-section-number">6</span> 3D Surface</h1>
+<p>Two feet interval contour interval of the Guilford county, downloaded from the North Carolina State GIS, was used during the process. Conversion of contour line file into Digital Elevation Model (DEM). Used fill tool to fill the small unnatural potholes of the surface. The fill tool smoothens out the surface. The flow direction tool was utilized to determine the direction of the flow from each raster cell. Flow accumulation tool was used to capture flow of the raster file. The outlet point (pour point) was used to capture the flow of the file. The intersection of North Buffalo Creek in Yanceyville street of Greensboro was identified as the pour point. The watershed tool was used to create the outline of the watershed. The raster was then converted to shapefile. I then used convert raster to TIN to create TIN map of the study site.</p>
 </div>
 
 

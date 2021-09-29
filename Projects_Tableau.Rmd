@@ -5,9 +5,9 @@ output:
     toc: true
     toc_float:
       collapsed: false
+    number_sections: true
     df_print: paged
 ---
-
 
 <style type="text/css">
 body {
@@ -42,6 +42,29 @@ Tableau is my favorite tool when it comes to visualizing non-spatial data. I lov
 
 \
 
+
+
+# Citizen Science
+
+
+
+<div class="col-sm-6">
+[![](images/Citizen_Science_Data.png)](https://public.tableau.com/app/profile/rajesh6683/viz/CitizenScienceData/CitizenScienceData){target="_blank"}
+
+
+</div>
+
+Natural Disasters such as storms, hurricanes, and flash floods claims thousands of lives of lives each year in the United States. I downloaded the Storm Events Data from the NOAA’s National National Weather Service (NWS) website and created a dashboard using Tableau software.
+
+The date ranged from 20211 to 2020 and the data were downloaded in .csv format (10 .csv file total). The data was cleaned up/joined in R and Excel.
+
+\
+\
+\
+\
+\
+\
+
 ---
 
 # Natural Disaster
@@ -49,7 +72,7 @@ Tableau is my favorite tool when it comes to visualizing non-spatial data. I lov
 
 
 <div class="col-sm-6">
-[![](images/disaster_dashboard.png)](https://uncg.maps.arcgis.com/apps/dashboards/d8c35828c7a4489ea2e9a6b7d69e817d){target="_blank"}
+[![](images/disaster_dashboard.png)](https://public.tableau.com/app/profile/rajesh6683/viz/storms_dashboard/Dashboard2){target="_blank"}
 
 
 </div>
@@ -67,12 +90,12 @@ The date ranged from 20211 to 2020 and the data were downloaded in .csv format (
 
 ---
 
-# Citizen Science
+# Human Development Index
 
 
 
 <div class="col-sm-6">
-[![](images/Citizen_Science_Data.png)](https://uncg.maps.arcgis.com/apps/dashboards/d8c35828c7a4489ea2e9a6b7d69e817d){target="_blank"}
+[![](images/HDI.png)](https://public.tableau.com/app/profile/rajesh6683/viz/CountriesHDIRank/Dashboard3){target="_blank"}
 
 
 </div>
@@ -86,12 +109,6 @@ The date ranged from 20211 to 2020 and the data were downloaded in .csv format (
 \
 \
 \
-\
-
-
-
-# Citizen Science
-
 
 
 
