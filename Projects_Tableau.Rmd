@@ -53,7 +53,7 @@ Tableau is my favorite tool when it comes to visualizing non-spatial data. I lov
 
 
 <div class="col-sm-6">
-[![](images/NepalDashboard.png)](https://public.tableau.com/views/LandCoverofNepal_16393352113850/NepalDashboard?:language=en-US&:display_count=n&:origin=viz_share_link){target="_blank"}
+[![](images/NepalDashboard.png)](https://public.tableau.com/views/ExaminingLandCoverofNepal/NepalDashboard?:language=en-US&:display_count=n&:origin=viz_share_link){target="_blank"}
 
 
 </div>
