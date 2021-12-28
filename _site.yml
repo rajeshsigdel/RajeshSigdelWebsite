@@ -8,7 +8,7 @@ navbar:
     - text: "Articles and Publications"
       icon: fa-book
       href: Articles.html
-    - text: "Educations and Awards"
+    - text: "Education and Awards"
       icon: fa-user-graduate
       href: education.html
     - text: "Projects & Portfolio"
@@ -20,7 +20,7 @@ navbar:
           href: Projects_Tableau.html
         - text: "R Projects"
           href: Projects_R.html
-    - text: "About me"
+    - text: "About Me"
       icon: fa-user
       href: practice.html
   right:
